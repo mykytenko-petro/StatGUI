@@ -20,7 +20,7 @@ class SensorsWidget(QFrame):
         self.setObjectName("SensorsWidget")
         self.setProperty("class", "card")
 
-        self._values = list(self.DEFAULT_VALUES)
+        self.values = list(self.DEFAULT_VALUES)
         self.value_labels: list[QLabel] = []
 
         self._init_ui()
@@ -42,7 +42,7 @@ class SensorsWidget(QFrame):
             name_label = QLabel(f"Sensor {i + 1}", self)
             name_label.setProperty("class", "sensor-name")
 
-            val = self._values[i]
+            val = self.values[i]
             val_label = QLabel(f"{val:.1f} cm", self)
             val_label.setObjectName(f"SensorValue_{i}")
             val_label.setProperty("class", "sensor-value")
@@ -68,7 +68,7 @@ class SensorsWidget(QFrame):
 
     def update_sensor(self, index: int, value: float):
         if 0 <= index < len(self.value_labels):
-            self._values[index] = value
+            self.values[index] = value
             label = self.value_labels[index]
             label.setText(f"{value:.1f} cm")
             label.setProperty("status", self._get_status(value))

@@ -4,7 +4,7 @@ QFrame[class="card"] {
     
     background-color: #0d233e;
 
-    border: 5px solid #0b2245;
+    border: 2px solid #0e2d58;
     border-radius: 10px;
 }
 

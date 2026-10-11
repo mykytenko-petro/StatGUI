@@ -1,1 +1,71 @@
-/* StatusWidget specific styles */
+QLabel#StatusTitle {
+    color: #e2e8f0;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+QLabel#StatusLabel {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+QLabel#StatusLabel[status="running"] {
+    color: #22c55e;
+}
+
+QLabel#StatusLabel[status="stopped"] {
+    color: #94a3b8;
+}
+
+QLabel#TimerLabel {
+    color: #fc682f;
+    font-size: 28px;
+    font-weight: bold;
+    padding: 6px 0;
+}
+
+QPushButton#StartButton {
+    background-color: #fe561f;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 13px;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+}
+
+QPushButton#StartButton:hover {
+    background-color: #FE6E3F;
+}
+
+QPushButton#StartButton:pressed {
+    background-color: #FF835B;
+}
+
+QPushButton#StartButton:disabled {
+    background-color: #7F3D29;
+    color: #64748b;
+}
+
+QPushButton#StopButton {
+    background-color: #dc2626;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 13px;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+}
+
+QPushButton#StopButton:hover {
+    background-color: #ef4444;
+}
+
+QPushButton#StopButton:pressed {
+    background-color: #b91c1c;
+}
+
+QPushButton#StopButton:disabled {
+    background-color: #3b1d24;
+    color: #64748b;
+}
