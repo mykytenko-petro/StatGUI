@@ -1,0 +1,9 @@
+QFrame#ContentWidget {
+    margin: 0;
+    padding: 0;
+}
+
+QFrame#LeftContainer {
+    min-width: 800px;
+}
+
