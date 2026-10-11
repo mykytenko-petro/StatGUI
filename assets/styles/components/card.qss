@@ -1,0 +1,10 @@
+QFrame[class="card"] {
+    margin: 0;
+    padding: 0;
+    
+    background-color: #0d233e;
+
+    border: 5px solid #0b2245;
+    border-radius: 10px;
+}
+

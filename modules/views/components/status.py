@@ -6,3 +6,4 @@ class StatusWidget(QFrame):
         super().__init__(parent)
         
         self.setObjectName("StatusWidget")
+        self.setProperty("class", "card")

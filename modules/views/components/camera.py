@@ -6,3 +6,4 @@ class CameraWidget(QFrame):
         super().__init__(parent)
         
         self.setObjectName("CameraWidget")
+        self.setProperty("class", "card")

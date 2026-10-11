@@ -6,3 +6,4 @@ class SensorsWidget(QFrame):
         super().__init__(parent)
         
         self.setObjectName("SensorsWidget")
+        self.setProperty("class", "card")

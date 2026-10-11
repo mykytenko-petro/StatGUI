@@ -8,6 +8,8 @@ from PyQt6.QtWidgets import (
 from .camera import CameraWidget
 from .status import StatusWidget
 from .sensors import SensorsWidget
+from .speed import SpeedWidget
+from .events import EventsWidget
 
 
 class ContentWidget(QFrame):
@@ -25,6 +27,7 @@ class ContentWidget(QFrame):
         left_container = QFrame()
         left_container.setObjectName("LeftContainer")
         left_container_layout = QVBoxLayout(left_container)
+        left_container_layout.setContentsMargins(5, 0, 0, 5)
         layout.addWidget(left_container)
 
         bottom_left_container = QFrame()
@@ -34,7 +37,8 @@ class ContentWidget(QFrame):
 
         right_container = QFrame()
         right_container.setObjectName("RightContainer")
-        right_container_layout = QVBoxLayout(right_container) # TODO: use this layout
+        right_container_layout = QVBoxLayout(right_container)
+        right_container_layout.setContentsMargins(0, 0, 5, 5)
         layout.addWidget(right_container, 1)
         
         camera = CameraWidget(self)
@@ -48,5 +52,8 @@ class ContentWidget(QFrame):
         bottom_left_container_layout.addWidget(status)
         bottom_left_container_layout.addWidget(sensors)
 
+        speed = SpeedWidget(right_container)
+        events = EventsWidget(right_container)
 
-
+        right_container_layout.addWidget(speed, 1)
+        right_container_layout.addWidget(events, 1)
