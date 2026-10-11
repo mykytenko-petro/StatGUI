@@ -1,1 +1,27 @@
-/* SensorsWidget specific styles */
+QLabel#SensorsTitle {
+    color: #e2e8f0;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+QLabel[class="sensor-name"] {
+    color: #94a3b8;
+    font-size: 13px;
+}
+
+QLabel[class="sensor-value"] {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+QLabel[status="green"] {
+    color: #22c55e;
+}
+
+QLabel[status="yellow"] {
+    color: #eab308;
+}
+
+QLabel[status="red"] {
+    color: #ef4444;
+}
