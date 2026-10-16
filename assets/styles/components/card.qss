@@ -8,3 +8,6 @@ QFrame[class="card"] {
     border-radius: 10px;
 }
 
+QLabel[class="card-name"] {
+    
+}
