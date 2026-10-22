@@ -1,10 +1,97 @@
 QFrame#HeaderWidget {
-    min-height: 50px;
+    min-height: 48px;
+    max-height: 48px;
+    background-color: #020f22;
+    border-bottom: 1px solid #0e274a;
+}
 
-    margin: 0;
-    padding: 0;
-    
-    background-color: #061a30;
+QLabel#HeaderAppTitle {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
 
-    border-bottom: 2px solid #0b2245;
+QLabel#HeaderSeparator {
+    color: #1e3f6b;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+QLabel#HeaderSubtitle {
+    color: #6b8bb2;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+QComboBox#BolidSelector {
+    background-color: #071c38;
+    border: 1px solid #183d6e;
+    border-radius: 6px;
+    padding: 3px 10px 3px 12px;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 12px;
+    min-width: 90px;
+}
+
+QComboBox#BolidSelector:hover {
+    border-color: #2563eb;
+}
+
+QComboBox#BolidSelector::drop-down {
+    border: none;
+    width: 16px;
+}
+
+QComboBox#BolidSelector QAbstractItemView {
+    background-color: #071c38;
+    color: #ffffff;
+    selection-background-color: #143d70;
+    border: 1px solid #183d6e;
+}
+
+QFrame#ConnectedBadge {
+    background-color: #042721;
+    border: 1px solid #059669;
+    border-radius: 12px;
+}
+
+QLabel#ConnectedBadgeDot {
+    color: #00e676;
+    font-size: 10px;
+}
+
+QLabel#ConnectedBadgeText {
+    color: #10b981;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+QLabel#BatteryText {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+QLabel#ClockText {
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 600;
+    font-family: monospace;
+}
+
+QPushButton#HeaderIconButton {
+    background-color: transparent;
+    border: none;
+    color: #8fa3c0;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+QPushButton#HeaderIconButton:hover {
+    color: #ffffff;
+    background-color: #0a213e;
 }

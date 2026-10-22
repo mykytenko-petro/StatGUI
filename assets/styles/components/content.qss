@@ -1,9 +1,7 @@
 QFrame#ContentWidget {
-    margin: 0;
-    padding: 0;
+    background-color: #020f22;
 }
 
-QFrame#LeftContainer {
-    min-width: 800px;
+QFrame#LeftContainer, QFrame#RightContainer, QFrame#BottomLeftContainer {
+    background-color: transparent;
 }
-

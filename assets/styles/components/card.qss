@@ -1,13 +1,5 @@
 QFrame[class="card"] {
-    margin: 0;
-    padding: 0;
-    
-    background-color: #0d233e;
-
-    border: 2px solid #0e2d58;
+    background-color: #051833;
+    border: 1px solid #143564;
     border-radius: 10px;
-}
-
-QLabel[class="card-name"] {
-    
 }

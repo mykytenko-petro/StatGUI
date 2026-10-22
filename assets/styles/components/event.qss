@@ -1,1 +1,52 @@
-/* EventsWidget specific styles */
+QLabel#EventsTitle {
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+QFrame#EventsListCard {
+    background-color: #04142a;
+    border: 1px solid #102a50;
+    border-radius: 8px;
+}
+
+QLabel#EventDot {
+    color: #00e676;
+    font-size: 10px;
+}
+
+QLabel#EventTime {
+    color: #7493b8;
+    font-size: 12px;
+    font-weight: 500;
+    font-family: monospace;
+}
+
+QLabel#EventMessage {
+    color: #f1f5f9;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+QFrame#EventRowSeparator {
+    background-color: #0d2547;
+}
+
+QPushButton#OpenLogButton {
+    background-color: transparent;
+    border: 1px solid #1a3c68;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: bold;
+    min-height: 38px;
+}
+
+QPushButton#OpenLogButton:hover {
+    background-color: #0d284f;
+    border-color: #2563eb;
+}
+
+QPushButton#OpenLogButton:pressed {
+    background-color: #143564;
+}

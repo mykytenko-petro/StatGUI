@@ -1,60 +1,85 @@
 QLabel#StatusTitle {
-    color: #e2e8f0;
+    color: #ffffff;
     font-size: 15px;
     font-weight: bold;
 }
 
-QLabel#StatusLabel {
-    font-size: 13px;
+QFrame#ReadyBadge {
+    background-color: #042721;
+    border: 1px solid #059669;
+    border-radius: 10px;
+}
+
+QLabel#ReadyBadgeDot {
+    color: #00e676;
+    font-size: 9px;
+}
+
+QLabel#ReadyBadgeText {
+    color: #10b981;
     font-weight: bold;
+    font-size: 11px;
 }
 
-QLabel#StatusLabel[status="running"] {
-    color: #22c55e;
+QLabel#CheckmarkIcon {
+    background-color: #00e676;
+    color: #011d16;
+    border-radius: 10px;
+    min-width: 20px;
+    max-width: 20px;
+    min-height: 20px;
+    max-height: 20px;
+    font-size: 11px;
+    font-weight: 900;
 }
 
-QLabel#StatusLabel[status="stopped"] {
-    color: #94a3b8;
+QLabel#CheckmarkLabel {
+    color: #f1f5f9;
+    font-size: 13px;
+    font-weight: 500;
 }
 
 QLabel#TimerLabel {
-    color: #fc682f;
-    font-size: 28px;
-    font-weight: bold;
-    padding: 6px 0;
+    color: #ff5722;
+    font-size: 42px;
+    font-weight: 800;
+    font-family: monospace;
+    letter-spacing: 2px;
 }
 
 QPushButton#StartButton {
-    background-color: #fe561f;
+    background-color: #fe581a;
     color: #ffffff;
     font-weight: bold;
     font-size: 13px;
     border: none;
-    border-radius: 4px;
-    padding: 8px 16px;
+    border-radius: 8px;
+    min-height: 38px;
+    padding: 0 16px;
 }
 
 QPushButton#StartButton:hover {
-    background-color: #FE6E3F;
+    background-color: #ff6e36;
 }
 
 QPushButton#StartButton:pressed {
-    background-color: #FF835B;
+    background-color: #e04810;
 }
 
 QPushButton#StartButton:disabled {
-    background-color: #7F3D29;
-    color: #64748b;
+    background-color: #552718;
+    color: #886256;
 }
 
 QPushButton#StopButton {
-    background-color: #dc2626;
+    background-color: #e53935;
     color: #ffffff;
     font-weight: bold;
     font-size: 13px;
     border: none;
-    border-radius: 4px;
-    padding: 8px 16px;
+    border-radius: 8px;
+    min-height: 38px;
+    padding: 0 16px;
 }
 
 QPushButton#StopButton:hover {
@@ -62,10 +87,36 @@ QPushButton#StopButton:hover {
 }
 
 QPushButton#StopButton:pressed {
-    background-color: #b91c1c;
+    background-color: #c62828;
 }
 
 QPushButton#StopButton:disabled {
-    background-color: #3b1d24;
-    color: #64748b;
+    background-color: #451b22;
+    color: #7d4952;
+}
+
+QLabel#ModeTitle {
+    color: #7493b8;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+QRadioButton#ModeRadio {
+    color: #e2e8f0;
+    font-size: 12px;
+    font-weight: 500;
+    spacing: 6px;
+}
+
+QRadioButton#ModeRadio::indicator {
+    width: 14px;
+    height: 14px;
+    border-radius: 7px;
+    border: 1.5px solid #4a6d96;
+    background: transparent;
+}
+
+QRadioButton#ModeRadio::indicator:checked {
+    border: 2px solid #3b82f6;
+    background-color: #3b82f6;
 }

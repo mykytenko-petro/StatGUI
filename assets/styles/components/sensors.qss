@@ -1,27 +1,23 @@
 QLabel#SensorsTitle {
-    color: #e2e8f0;
+    color: #ffffff;
     font-size: 15px;
     font-weight: bold;
 }
 
-QLabel[class="sensor-name"] {
-    color: #94a3b8;
-    font-size: 13px;
+QLabel#SensorsSubtitle {
+    color: #6482a6;
+    font-size: 11px;
+    font-weight: 500;
 }
 
-QLabel[class="sensor-value"] {
-    font-size: 13px;
-    font-weight: bold;
+QLabel#SensorName {
+    color: #8fa3c0;
+    font-size: 11px;
+    font-weight: 500;
 }
 
-QLabel[status="green"] {
-    color: #22c55e;
-}
-
-QLabel[status="yellow"] {
-    color: #eab308;
-}
-
-QLabel[status="red"] {
-    color: #ef4444;
+QLabel#LegendText {
+    color: #8fa3c0;
+    font-size: 11px;
+    font-weight: 500;
 }

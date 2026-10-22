@@ -1,5 +1,46 @@
-QLabel#SpeedLabel {
+QLabel#SpeedTitle {
     color: #ffffff;
-    font-size: 32px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+QFrame#SpeedSubCard {
+    background-color: #04142a;
+    border: 1px solid #102a50;
+    border-radius: 8px;
+}
+
+QLabel#SpeedSubLabel {
+    color: #7493b8;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+QLabel#SpeedMaxVal {
+    color: #ff5722;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+QLabel#SpeedMaxUnit {
+    color: #e2e8f0;
+    font-size: 13px;
+    font-weight: 600;
+    padding-top: 4px;
+}
+
+QLabel#SpeedSubDivider {
+    color: #142f56;
+    font-size: 20px;
+}
+
+QLabel#SpeedStatusDot {
+    color: #00e676;
+    font-size: 14px;
+}
+
+QLabel#SpeedStatusText {
+    color: #00e676;
+    font-size: 15px;
     font-weight: bold;
 }

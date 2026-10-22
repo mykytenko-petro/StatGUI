@@ -15,45 +15,54 @@ from .events import EventsWidget
 class ContentWidget(QFrame):
     def __init__(self, parent: QWidget):
         super().__init__(parent)
-
         self.setObjectName("ContentWidget")
 
         self._init_ui()
 
     def _init_ui(self):
-        layout = QHBoxLayout(self)
-        layout.setContentsMargins(0, 0, 0, 0)
+        main_layout = QHBoxLayout(self)
+        main_layout.setContentsMargins(10, 10, 10, 10)
+        main_layout.setSpacing(10)
 
-        left_container = QFrame()
+        # Left Column (Camera + Bottom row)
+        left_container = QFrame(self)
         left_container.setObjectName("LeftContainer")
-        left_container_layout = QVBoxLayout(left_container)
-        left_container_layout.setContentsMargins(5, 0, 0, 5)
-        layout.addWidget(left_container)
+        left_layout = QVBoxLayout(left_container)
+        left_layout.setContentsMargins(0, 0, 0, 0)
+        left_layout.setSpacing(10)
 
-        bottom_left_container = QFrame()
+        # 1. Camera Widget
+        self.camera = CameraWidget(left_container)
+        left_layout.addWidget(self.camera, 60)
+
+        # 2. Bottom Row (Status + Sensors)
+        bottom_left_container = QFrame(left_container)
         bottom_left_container.setObjectName("BottomLeftContainer")
-        bottom_left_container_layout = QHBoxLayout(bottom_left_container)
-        bottom_left_container_layout.setContentsMargins(0, 0, 0, 0)
+        bottom_layout = QHBoxLayout(bottom_left_container)
+        bottom_layout.setContentsMargins(0, 0, 0, 0)
+        bottom_layout.setSpacing(10)
 
-        right_container = QFrame()
+        self.status = StatusWidget(bottom_left_container)
+        self.sensors = SensorsWidget(bottom_left_container)
+
+        bottom_layout.addWidget(self.status, 44)
+        bottom_layout.addWidget(self.sensors, 56)
+
+        left_layout.addWidget(bottom_left_container, 40)
+
+        main_layout.addWidget(left_container, 72)
+
+        # Right Column (Speed + Events)
+        right_container = QFrame(self)
         right_container.setObjectName("RightContainer")
-        right_container_layout = QVBoxLayout(right_container)
-        right_container_layout.setContentsMargins(0, 0, 5, 5)
-        layout.addWidget(right_container, 1)
-        
-        camera = CameraWidget(self)
-        left_container_layout.addWidget(camera)
+        right_layout = QVBoxLayout(right_container)
+        right_layout.setContentsMargins(0, 0, 0, 0)
+        right_layout.setSpacing(10)
 
-        left_container_layout.addWidget(bottom_left_container, 1)
+        self.speed = SpeedWidget(right_container)
+        self.events = EventsWidget(right_container)
 
-        status = StatusWidget(bottom_left_container)
-        sensors = SensorsWidget(bottom_left_container)
+        right_layout.addWidget(self.speed, 48)
+        right_layout.addWidget(self.events, 52)
 
-        bottom_left_container_layout.addWidget(status)
-        bottom_left_container_layout.addWidget(sensors)
-
-        speed = SpeedWidget(right_container)
-        events = EventsWidget(right_container)
-
-        right_container_layout.addWidget(speed, 1)
-        right_container_layout.addWidget(events, 1)
+        main_layout.addWidget(right_container, 28)
