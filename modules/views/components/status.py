@@ -27,7 +27,6 @@ class StatusWidget(QFrame):
         self._timer.timeout.connect(self._on_tick)
 
         self._init_ui()
-        self._connect_signals()
 
     def _init_ui(self):
         layout = QVBoxLayout(self)
@@ -115,10 +114,6 @@ class StatusWidget(QFrame):
         buttons_layout.addWidget(self.stop_btn)
 
         layout.addLayout(buttons_layout)
-
-    def _connect_signals(self):
-        self.started.connect(lambda: print("Started"))
-        self.stopped.connect(lambda: print("Stopped"))
 
     def start(self):
         if not self._is_running:
