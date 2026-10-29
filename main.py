@@ -23,8 +23,8 @@ def main():
     app.aboutToQuit.connect(server_worker.stop)
     server_worker.start()
 
-    CommandController(server_worker, window.status_widget)
-    TelemetryController(server_worker, window.sensor_widget)
+    window.command_controller = CommandController(server_worker, window.status_widget)  # type: ignore
+    window.telemetry_controller = TelemetryController(server_worker, window.sensor_widget)  # type: ignore
 
     window.show()
 

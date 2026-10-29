@@ -15,14 +15,12 @@ class CommandController:
 
     def _on_started(self):
         try:
-            self._server_worker.send_data({"cmd": "test:led_on"})
+            self._server_worker.send_data({"cmd": "state:run"})
         except RuntimeError as e:
             print(f"[CommandController] Failed to send start command: {e}")
 
     def _on_stopped(self):
         try:
-            self._server_worker.send_data({"cmd": "test:led_off"})
+            self._server_worker.send_data({"cmd": "state:stop"})
         except RuntimeError as e:
             print(f"[CommandController] Failed to send stop command: {e}")
-
-
