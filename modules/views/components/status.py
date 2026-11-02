@@ -100,7 +100,7 @@ class StatusWidget(QFrame):
         # Buttons
         buttons_layout = QVBoxLayout()
         buttons_layout.setContentsMargins(0, 2, 0, 2)
-        buttons_layout.setSpacing(8)
+        buttons_layout.setSpacing(16)
 
         self.start_btn = QPushButton("▶   ЗАПУСТИТИ БОЛІД", self)
         self.start_btn.setObjectName("StartButton")
