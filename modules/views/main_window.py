@@ -8,7 +8,7 @@ class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
 
-        self.setWindowTitle("RC BOLID CONTRO5L - Моніторинг і запуск")
+        self.setWindowTitle("RC BOLID CONTROL - Моніторинг і запуск")
         self.resize(1280, 720)
         self.setMinimumSize(1024, 576)
 
@@ -41,3 +41,7 @@ class MainWindow(QMainWindow):
     @property
     def sensor_widget(self):
         return self.content.sensors
+
+    @property
+    def speed_widget(self):
+        return self.content.speed

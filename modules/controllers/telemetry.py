@@ -1,5 +1,5 @@
+from ..views.components.speed import SpeedWidget
 from ..views.components.sensors import SensorsWidget
-
 from ..services import ServerWorker
 
 
@@ -7,9 +7,11 @@ class TelemetryController:
     def __init__(
             self,
             server_worker: ServerWorker,
-            sensors_widget: SensorsWidget
+            sensors_widget: SensorsWidget,
+            speed_widget: SpeedWidget
         ) -> None:
         self._sensors_widget = sensors_widget
+        self._speed_widget = speed_widget
         
         server_worker.data_received.connect(self._on_data_recieved)
         
@@ -21,3 +23,5 @@ class TelemetryController:
             data["FAR_LEFT"],
             data["FAR_RIGHT"],
         ])
+
+        self._speed_widget.update_speed(data["RPM"])

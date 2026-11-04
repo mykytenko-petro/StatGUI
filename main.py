@@ -24,7 +24,11 @@ def main():
     server_worker.start()
 
     window.command_controller = CommandController(server_worker, window.status_widget)  # type: ignore
-    window.telemetry_controller = TelemetryController(server_worker, window.sensor_widget)  # type: ignore
+    window.telemetry_controller = TelemetryController(  # type: ignore
+        server_worker,
+        window.sensor_widget,
+        window.speed_widget
+    )
 
     window.show()
 
