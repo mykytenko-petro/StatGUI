@@ -4,7 +4,7 @@ from PyQt6.QtCore import QThread, pyqtSignal
 
 
 class ServerWorker(QThread):
-    data_received = pyqtSignal(str)
+    data_received = pyqtSignal(dict)
 
     def __init__(self, host='0.0.0.0', port=5005, parent=None):
         super().__init__(parent)
