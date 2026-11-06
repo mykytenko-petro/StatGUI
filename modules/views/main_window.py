@@ -30,9 +30,7 @@ class MainWindow(QMainWindow):
         layout.addWidget(self.content, 1)
 
     def on_telemetry_received(self, value: float):
-        """Called when new telemetry data arrives."""
-        if hasattr(self, 'content') and hasattr(self.content, 'speed'):
-            self.content.speed.update_speed(value)
+        self.content.speed.update_speed(value["RPM"]) # type: ignore
 
     @property
     def status_widget(self):
