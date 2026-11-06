@@ -17,11 +17,11 @@ class TelemetryController:
         
     def _on_data_recieved(self, data: dict):
         self._sensors_widget.update_sensors([
-            data["LEFT"],
-            data["MIDDLE"],
-            data["RIGHT"],
-            data["FAR_LEFT"],
-            data["FAR_RIGHT"],
+            data.get("LEFT"),
+            data.get("MIDDLE"),
+            data.get("RIGHT"),
+            data.get("FAR_LEFT"),
+            data.get("FAR_RIGHT"),
         ])
 
         self._speed_widget.update_speed(data["RPM"])

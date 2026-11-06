@@ -43,13 +43,13 @@ class SensorBox(QFrame):
         layout.addLayout(top_layout)
 
         # Bottom line: "1.42 м"
-        self.val_label = QLabel(f"{self.value:.2f} м", self)
+        self.val_label = QLabel(f"{self.value:.2f} мм", self)
         self.val_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
         layout.addWidget(self.val_label)
 
     def set_value(self, value: float):
         self.value = value
-        self.val_label.setText(f"{value:.2f} м")
+        self.val_label.setText(f"{value:.2f} мм")
 
         if value > 1.0:
             color = "#00e676"
@@ -80,7 +80,7 @@ class SensorsWidget(QFrame):
     sensor_updated = pyqtSignal(int, float)
     sensors_updated = pyqtSignal(list)
 
-    DEFAULT_VALUES = [1.42, 2.86, 0.94, 0.38, 1.18]
+    DEFAULT_VALUES = [0.0, 0.0, 0.0, 0.0, 0.0]
 
     def __init__(self, parent: QWidget | None = None):
         super().__init__(parent)
@@ -180,4 +180,4 @@ class SensorsWidget(QFrame):
     def update_sensors(self, values: list):
         for i, val in enumerate(values):
             if i < len(self.boxes):
-                self.update_sensor(i, float(val))
+                self.update_sensor(i, float(val) if val else 0.0)
